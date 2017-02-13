@@ -44,7 +44,7 @@ namespace MyWebServer
             if (route == null)
                 return new HttpResponse()
                 {
-                    Code = (int) ResponseCode.MethodNotAllowed
+                    StatusCode =  ResponseStatusCode.MethodNotAllowed
                 };
 
             #region FIleSystemHandler

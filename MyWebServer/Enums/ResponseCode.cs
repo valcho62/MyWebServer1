@@ -1,6 +1,6 @@
 ﻿namespace MyWebServer.Enums
 {
-    public enum ResponseCode
+    public enum ResponseStatusCode
     {
         Continue = 100,
         OK = 200,

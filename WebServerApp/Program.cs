@@ -22,9 +22,8 @@ namespace WebServerApp
                     {
                         return new HttpResponse()
                         {
-                            Code = 200,
-                            CodeMessage = ResponseCode.OK,
-                            UTF8Content = "<h3>Hello from server ;-)</h3>",
+                            StatusCode = ResponseStatusCode.OK,
+                            ContentAsUTF8 = "<h3>Hello from server ;-)</h3>",
                         };
                     }
                 }

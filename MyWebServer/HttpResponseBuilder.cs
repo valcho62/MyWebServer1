@@ -13,10 +13,9 @@ namespace MyWebServer
             var header = new Header(HeaderType.HttpResponse);
             var response = new HttpResponse()
             {
-                Code = 500,
-                CodeMessage = ResponseCode.InternalServerError,
+                StatusCode = ResponseStatusCode.InternalServerError,
                 Header = header,
-                UTF8Content = page500
+                ContentAsUTF8 = page500
             };
             return response;
         }
@@ -27,10 +26,9 @@ namespace MyWebServer
             var header = new Header(HeaderType.HttpResponse);
             var response = new HttpResponse()
             {
-                Code = 401,
-                CodeMessage = ResponseCode.NotFound,
+                StatusCode = ResponseStatusCode.NotFound,
                 Header = header,
-                UTF8Content = page401
+                ContentAsUTF8 = page401
             };
             return response;
         }

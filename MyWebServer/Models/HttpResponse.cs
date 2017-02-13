@@ -7,11 +7,17 @@ namespace MyWebServer.Models
 {
     public class HttpResponse
     {
-        public int Code { get; set; }
-        public ResponseCode CodeMessage { get; set; }
+        public ResponseStatusCode StatusCode { get; set; }
+        public string StatusMessage
+        {
+            get
+            {
+                return Enum.GetName(typeof(ResponseStatusCode), this.StatusCode);
+            }
+        }
         public Header Header { get; set; }
         public byte[] Content { get; set; }
-        public string UTF8Content
+        public string ContentAsUTF8
         {
             set
             {
@@ -28,7 +34,7 @@ namespace MyWebServer.Models
         public override string ToString()
         {
             var response = new StringBuilder();
-            response.AppendLine($"HTTP/1.0 {Convert.ToInt32(this.CodeMessage)} {this.CodeMessage}");
+            response.AppendLine($"HTTP/1.0 {this.StatusCode} {this.StatusMessage}");
             response.AppendLine(this.Header.ToString());
             return response.ToString();
         }
