@@ -25,6 +25,48 @@ namespace SharpStore
                         };
                     }
                 },
+                 new Route()
+                {
+                    Name = "About Us",
+                    Method = MyWebServer.Enums.RequestMethod.GET,
+                    UrlRegex = "^/about$",
+                    Callable = (request) =>
+                    {
+                        return new HttpResponse()
+                        {
+                            StatusCode = MyWebServer.Enums.ResponseStatusCode.OK,
+                            ContentAsUTF8 = File.ReadAllText("../../content/about.html")
+                        };
+                    }
+                },
+                  new Route()
+                {
+                    Name = "Products",
+                    Method = MyWebServer.Enums.RequestMethod.GET,
+                    UrlRegex = "^/products$",
+                    Callable = (request) =>
+                    {
+                        return new HttpResponse()
+                        {
+                            StatusCode = MyWebServer.Enums.ResponseStatusCode.OK,
+                            ContentAsUTF8 = File.ReadAllText("../../content/products.html")
+                        };
+                    }
+                },
+                    new Route()
+                {
+                    Name = "Contacts",
+                    Method = MyWebServer.Enums.RequestMethod.GET,
+                    UrlRegex = "^/contacts$",
+                    Callable = (request) =>
+                    {
+                        return new HttpResponse()
+                        {
+                            StatusCode = MyWebServer.Enums.ResponseStatusCode.OK,
+                            ContentAsUTF8 = File.ReadAllText("../../content/contacts.html")
+                        };
+                    }
+                },
                 new Route()
                 {
                     Name = "Carousel CSS",
@@ -61,7 +103,7 @@ namespace SharpStore
                 {
                     Name = "Bootstrap CSS",
                     Method = MyWebServer.Enums.RequestMethod.GET,
-                    UrlRegex = "^/bootstrap/js/bootstrap.min.css$",
+                    UrlRegex = "^/bootstrap/css/bootstrap.min.css$",
                     Callable = (request) =>
                     {
                         var response = new HttpResponse()

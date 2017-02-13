@@ -30,6 +30,9 @@ namespace MyWebServer
                 Header = header,
                 ContentAsUTF8 = page401
             };
+            Console.WriteLine("-RESPONSE-----------------------------");
+            Console.WriteLine(response);
+            Console.WriteLine("------------------------------");
             return response;
         }
     }
