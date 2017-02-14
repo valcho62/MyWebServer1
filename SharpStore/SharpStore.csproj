@@ -33,7 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,15 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyWebServer\MyWebServer.csproj">
       <Project>{59c69652-55c6-4715-a56f-6ca9513bd97f}</Project>
       <Name>MyWebServer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
-      <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
-      <Name>SimpleHttpServer</Name>
+    <ProjectReference Include="..\SharpStoreDB\SharpStoreDB.csproj">
+      <Project>{fd2540e2-4ef8-412a-8205-e9dcff1fa373}</Project>
+      <Name>SharpStoreDB</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

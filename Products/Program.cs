@@ -14,7 +14,7 @@ namespace Products
 
            
             var knifes = contex.Knives.ToList();
-            Console.WriteLine("<div class=\"card-deck\">");
+            //sb.AppendLine("<div class=\"card-deck\">");
             foreach (var knife in knifes)
             {
                 Console.WriteLine("<div class=\"card\">");

@@ -56,7 +56,6 @@ namespace MyWebServer.Models
                 }
             }
             header.AppendLine(Environment.NewLine);
-            header.AppendLine(Environment.NewLine);
 
             return header.ToString();
         }
